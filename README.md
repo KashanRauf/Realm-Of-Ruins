@@ -26,4 +26,5 @@ Stuff that may be useful, include a link/name and a short description
 
 ## Collaborators
 * Kashan Rauf
+* Spencer Hum
 * (Add your names here)
