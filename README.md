@@ -8,7 +8,11 @@ Before pulling the repository:
 * After that you can pull the repository to the project folder
 * Send a screenshot in the GC of what the project looks like in the editor so I can confirm it works
 
+When pushing to the repository
+* Do not push to the main branch, the team will review, test, and then approve (or change) any additions before that
+
 I recommend using GitKraken for version control, makes it easy to manage commits and branches, you can get premium for free as a student (just ask me if you don't know how to get it).
+IF SOME THINGS DON'T WORK PROPERLY JUST MESSAGE ME AND I'LL SEE WHAT'S WRONG AND FIX IT
 
 ## Asset packs
 These are the asset packs currently in use, to avoid any issues, check the license on the asset store and then add the name/link of the pack here
