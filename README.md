@@ -12,6 +12,7 @@ When pushing to the repository
 * Do not push to the main branch, the team will review, test, and then approve (or change) any additions before that
 
 I recommend using GitKraken for version control, makes it easy to manage commits and branches, you can get premium for free as a student (just ask me if you don't know how to get it).
+
 IF SOME THINGS DON'T WORK PROPERLY JUST MESSAGE ME AND I'LL SEE WHAT'S WRONG AND FIX IT
 
 ## Asset packs
