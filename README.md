@@ -1,4 +1,4 @@
-# CISC 226 Project (Group 47 (I think))
+# CISC 226 Project- Group 47
 Put a name here
 
 ## Instructions for repository
@@ -19,6 +19,7 @@ IF SOME THINGS DON'T WORK PROPERLY JUST MESSAGE ME AND I'LL SEE WHAT'S WRONG AND
 These are the asset packs currently in use, to avoid any issues, check the license on the asset store and then add the name/link of the pack here
 * Tiny RPG - Forest: https://assetstore.unity.com/packages/2d/characters/tiny-rpg-forest-114685
 * Pixel Art Top Down - Basic: https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-187605
+* TextMeshPro - Should give you a prompt if needed
 
 ## Additional resources
 Stuff that may be useful, include a link/name and a short description
@@ -29,4 +30,5 @@ Stuff that may be useful, include a link/name and a short description
 * Kashan Rauf
 * Spencer Hum
 * Triss Lazaj
-* (Add your names here)
+* Ikra Mortoza
+* Lore Chiepe
