@@ -22,7 +22,8 @@ These are the asset packs currently in use, to avoid any issues, check the licen
 
 ## Additional resources
 Stuff that may be useful, include a link/name and a short description
-* (Nothing yet)
+* [Brackeys](https://www.youtube.com/@Brackeys) on Youtube, tons of great tutorials on game design
+* [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/), as opposed to VSCode (what I assume most people use), this version of visual studio has way better Unity integration and intellisense
 
 ## Collaborators
 * Kashan Rauf
