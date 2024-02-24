@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public new Camera camera;
     Vector2 movement;
     Vector2 mousePos;
+    public Vector2 lookDir { get; private set; }
 
 
     // Update is called once per frame
@@ -20,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
         
         mousePos = camera.ScreenToWorldPoint(Input.mousePosition);
         
-        Vector2 lookDir = mousePos - rb.position;
+        lookDir = mousePos - rb.position;
         // float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         
         animator.SetFloat("Horizontal", lookDir.x);
@@ -33,7 +34,5 @@ public class PlayerMovement : MonoBehaviour
     {
         // Actual movement/physics
         rb.MovePosition(rb.position + (movement * moveSpeed * Time.fixedDeltaTime));
-
-        
     }
 }

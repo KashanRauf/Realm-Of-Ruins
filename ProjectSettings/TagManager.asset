@@ -13,10 +13,10 @@ TagManager:
   - UI
   - Player
   - Props
-  - 
-  - 
-  - 
-  - 
+  - EnemyBullet
+  - Bullet
+  - Enemy
+  - Weapon
   - 
   - 
   - 
@@ -52,4 +52,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1464832143
+    locked: 0
+  - name: Weapon
+    uniqueID: 2466736243
     locked: 0
