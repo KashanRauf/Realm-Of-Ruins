@@ -8,13 +8,25 @@ public abstract class Weapon : MonoBehaviour
     public float weaponType {  get; protected set; }
     public float baseDamage { get; protected set; }
     public float cooldownTime { get; protected set; }
+    public float altCooldownTime { get; protected set; }
     public float wait { get; protected set; }
 
 
     public abstract void Attack();
 
+    public abstract void AltAttack();
+
     public float CooldownProgress()
     {
-        return ((cooldownTime - wait) / cooldownTime) * 100;
+        float time;
+        if (cooldownTime < wait)
+        {
+            time = altCooldownTime;
+        } 
+        else
+        {
+            time = cooldownTime;
+        }
+        return ((time - wait) / time) * 100;
     }
 }
