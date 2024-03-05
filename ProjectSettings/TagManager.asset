@@ -17,8 +17,8 @@ TagManager:
   - Bullet
   - Enemy
   - Weapon
-  - 
-  - 
+  - PlayerBlast
+  - Blast
   - 
   - 
   - 
@@ -53,6 +53,12 @@ TagManager:
   - name: Foreground
     uniqueID: 1464832143
     locked: 0
+  - name: Foreground Animation
+    uniqueID: 1166098043
+    locked: 0
   - name: Weapon
     uniqueID: 2466736243
+    locked: 0
+  - name: UI
+    uniqueID: 792061395
     locked: 0

@@ -13,16 +13,20 @@ public class Staff : Weapon
     protected PlayerMovement playerMovement;
     protected PlayerState player;
     public LayerMask enemies;
+    public float stunTime = 0.5f;
+    public Blast blast;
 
 
     private void Awake()
     {
         weaponType = 2;
         baseDamage = 5.0f;
-        cooldownTime = 1.5f;
+        cooldownTime = 1.2f;
+        altCooldownTime = 3.5f;
         playerMovement = GetComponentInParent<PlayerMovement>();
         player = GetComponentInParent<PlayerState>();
         pivotPoint = transform.parent;
+        //blast.
 
         transform.position += Vector3.up * radius;
         projectilePrefab.GetComponent<Projectile>().target = enemies;
@@ -45,6 +49,20 @@ public class Staff : Weapon
         projBody.AddForce(playerMovement.lookDir.normalized * force, ForceMode2D.Impulse);
 
         wait = cooldownTime;
+    }
+
+    public override void AltAttack()
+    {
+        if (wait > 0.0f)
+        {
+            Debug.Log(CooldownProgress());
+            return;
+        }
+
+        // Radial blast, destroy bullets and slight stun: Gives staves a more balanced play style
+        blast.Activate();
+
+        wait = altCooldownTime;
     }
 
     private void Update()

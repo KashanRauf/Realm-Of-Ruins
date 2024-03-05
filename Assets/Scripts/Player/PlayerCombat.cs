@@ -20,5 +20,9 @@ public class PlayerCombat : MonoBehaviour
         {
             player.weapon.Attack();
         }
+        else if (Input.GetButtonDown("Fire2"))
+        {
+            player.weapon.AltAttack();
+        }
     }
 }
