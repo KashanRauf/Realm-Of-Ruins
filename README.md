@@ -1,5 +1,5 @@
 # CISC 226 Project- Group 47
-Put a name here
+Realm of Ruins
 
 ## Instructions for repository
 Before pulling the repository:
