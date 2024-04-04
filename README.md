@@ -25,6 +25,7 @@ These are the asset packs currently in use, to avoid any issues, check the licen
 Stuff that may be useful, include a link/name and a short description
 * [Brackeys](https://www.youtube.com/@Brackeys) on Youtube, tons of great tutorials on game design
 * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/), as opposed to VSCode (what I assume most people use), this version of visual studio has way better Unity integration and intellisense
+* [Numberphile's Golden Ratio video]() can give you some interesting ideas for the generating bullet patterns, our entire mechanic is built on top of this
 
 ## Collaborators
 * Kashan Rauf

@@ -38,7 +38,7 @@ public class Skill : MonoBehaviour
 	// Name this sm better
 	public float CooldownFillBar()
 	{
-		Debug.Log("Mod: " + cooldownTime % wait);
+		// Debug.Log("Mod: " + cooldownTime % wait);
 		return 1 - ((cooldownTime - wait % cooldownTime) / cooldownTime);
 	}
 }

@@ -11,7 +11,6 @@ public class EnemyAttack : MonoBehaviour
     // Cooldown time in seconds
     private float cooldown = 2.0f;
     private float wait = 0.0f;
-    private float force = 10f;
     public LayerMask attackable;
     public bool inRange { get; private set; }
     private PlayerAwareness detection;
@@ -19,8 +18,22 @@ public class EnemyAttack : MonoBehaviour
     private EnemyState state;
     public Transform projectileOrigin;
     public GameObject projectilePrefab;
+    public GameObject bulletManager;
 
-
+    // Data published to bullet manager on attack
+    public (
+        float,
+        Vector2,
+        Vector2,
+        GameObject,
+        int,
+        int,
+        int,
+        float,
+        float,
+        float,
+        float
+    ) attackData;
 
     private void Awake()
     {
@@ -38,26 +51,20 @@ public class EnemyAttack : MonoBehaviour
         // Checks if player is in attack range
         inRange = detection.distanceFromPlayer.magnitude >= minAttackRange && detection.distanceFromPlayer.magnitude <= maxAttackRange;
 
-        if (wait > 0.0f)
-        {
-            wait -= Time.deltaTime;
-        }
+        if (wait > 0.0f) wait -= Time.deltaTime;
+
     }
 
     public void Attack()
     {
-        if (inRange && wait > 0.0f) {
-            // Debug.Log("Cooldown: " + (int) CooldownProgress() + "%");
-            return;
-        }
+        if (inRange && wait > 0.0f) return;
 
         // Does the actual attack
-        GameObject projectile = Instantiate(projectilePrefab, projectileOrigin.position, projectileOrigin.rotation);
-        Rigidbody2D projBody = projectile.GetComponent<Rigidbody2D>();
-        projectile.transform.up = move.targetDir;
-        projBody.AddForce(move.targetDir.normalized * force, ForceMode2D.Impulse);
+        Debug.Log("Player direction: " + move.targetDir);
+        attackData = (4.0f, gameObject.transform.position, move.targetDir.normalized, projectilePrefab, 0, 3, 2, 20f, 0.25f, 2f, 0f);
+        GameObject attackInstance = Instantiate(bulletManager);
+        attackInstance.GetComponent<BulletManager>().Initialize(attackData);
 
-        // Sets cooldown
         wait = cooldown;
     }
 

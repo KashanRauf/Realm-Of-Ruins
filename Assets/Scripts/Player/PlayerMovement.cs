@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 lookDir { get; private set; }
     public GameObject dashEffect;
     public Transform footPosition;
+    public GameManager gameManager;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameManager.isPaused) return;
         // Input controls
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     private PlayerState player;
+    public GameManager gameManager;
 
     private void Awake()
     {
@@ -15,7 +16,8 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameManager.isPaused) return;
+
         if (Input.GetButtonDown("Fire1"))
         {
             player.weapon.Attack();

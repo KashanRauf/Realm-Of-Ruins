@@ -17,11 +17,13 @@ public class PlayerAwareness : MonoBehaviour
         // Gets the player's transform
         // FindObjectOfType is not recommended for repeated use, okay to use in methods like Awake() but not Update()
         player = FindObjectOfType<PlayerMovement>().transform;
+        Debug.Log("Player: " + player);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (player == null) return;
         distanceFromPlayer = player.position - this.transform.position;
         playerDir = distanceFromPlayer.normalized;
 

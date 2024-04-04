@@ -7,26 +7,29 @@ public class Staff : Weapon
 
     public Transform projectileOrigin;
     public GameObject projectilePrefab;
+    public GameObject altProjectilePrefab;
     public float force = 15.0f;
     protected Transform pivotPoint;
     protected float radius = 0.5f;
     protected PlayerMovement playerMovement;
     protected PlayerState player;
     public LayerMask enemies;
+    public LayerMask defendAgainst;
     public float stunTime = 0.5f;
-    public Blast blast;
+    //public Blast blast;
+    public BulletManager bulletManager;
 
 
     private void Awake()
     {
         weaponType = 2;
         baseDamage = 5.0f;
-        cooldownTime = 1.2f;
-        altCooldownTime = 3.5f;
+        cooldownTime = 0.6f;
+        altCooldownTime = 1.75f;
         playerMovement = GetComponentInParent<PlayerMovement>();
         player = GetComponentInParent<PlayerState>();
         pivotPoint = transform.parent;
-        //blast.
+        
 
         transform.position += Vector3.up * radius;
         projectilePrefab.GetComponent<Projectile>().target = enemies;
@@ -60,7 +63,13 @@ public class Staff : Weapon
         }
 
         // Radial blast, destroy bullets and slight stun: Gives staves a more balanced play style
-        blast.Activate();
+        //blast.Activate();
+
+        (float, Vector2, Vector2, GameObject, int, int, int, float, float, float, float) attackData
+            = (0.25f, playerMovement.transform.position, playerMovement.lookDir.normalized, altProjectilePrefab, 0, 12, 1, 30f, 0, 3, 18);
+        var attackInstance = Instantiate(bulletManager);
+        attackInstance.GetComponent<BulletManager>().Initialize(attackData);
+        attackInstance.transform.position = playerMovement.transform.position;
 
         wait = altCooldownTime;
     }
