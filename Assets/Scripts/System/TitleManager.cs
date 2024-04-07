@@ -11,6 +11,7 @@ public class TitleManager : MonoBehaviour
     public GameObject UI;
     public GameObject credits;
     private bool showingCredits = false;
+    public AudioManager audioManager;
 
     private void Awake()
     {
@@ -22,7 +23,7 @@ public class TitleManager : MonoBehaviour
     {
         if (!showingCredits) return;
 
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown || Input.GetMouseButtonDown(0))
         {
             credits.SetActive(false);
             showingCredits = false;
@@ -31,17 +32,20 @@ public class TitleManager : MonoBehaviour
 
     public void Play()
     {
+        audioManager.Play("click");
         SceneManager.LoadScene("SampleScene");
     }
 
     public void Credits()
     {
+        audioManager.Play("click");
         credits.SetActive(true);
         showingCredits = true;
     }
 
     public void Quit()
     {
+        audioManager.Play("click");
         Debug.Log("Quitting game");
         Application.Quit();
     }
