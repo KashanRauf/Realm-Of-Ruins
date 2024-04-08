@@ -11,15 +11,14 @@ Before pulling the repository:
 When pushing to the repository
 * Do not push to the main branch, the team will review, test, and then approve (or change) any additions before that
 
-I recommend using GitKraken for version control, makes it easy to manage commits and branches, you can get premium for free as a student (just ask me if you don't know how to get it).
-
-IF SOME THINGS DON'T WORK PROPERLY JUST MESSAGE ME AND I'LL SEE WHAT'S WRONG AND FIX IT
+I recommend using GitKraken for version control, makes it easy to manage commits and branches, you can get premium for free as a student.
 
 ## Asset packs
 These are the asset packs currently in use, to avoid any issues, check the license on the asset store and then add the name/link of the pack here
 * Tiny RPG - Forest: https://assetstore.unity.com/packages/2d/characters/tiny-rpg-forest-114685
 * Pixel Art Top Down - Basic: https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-187605
-* TextMeshPro - Should give you a prompt if needed
+* TextMeshPro - Should give you a prompt if needed but also available on the asset store
+* Tiny TPG Town Environment - https://assetstore.unity.com/packages/2d/environments/tiny-rpg-town-environment-88293
 
 ## Additional resources
 Stuff that may be useful, include a link/name and a short description
