@@ -102,12 +102,17 @@ MonoBehaviour:
   projectileOrigin: {fileID: 942251990593673319}
   projectilePrefab: {fileID: 7180889225777080329, guid: ce2f9b0f2bf04d3418bde9b0bfa89f7b,
     type: 3}
+  altProjectilePrefab: {fileID: 7180889225777080329, guid: 259fdcca8273fb641aa2c1fe795d2f4e,
+    type: 3}
   force: 15
   enemies:
     serializedVersion: 2
     m_Bits: 1024
+  defendAgainst:
+    serializedVersion: 2
+    m_Bits: 0
   stunTime: 0.5
-  blast: {fileID: 6912737702984162156}
+  bulletManager: {fileID: 0}
 --- !u!1 &942251990593673316
 GameObject:
   m_ObjectHideFlags: 0

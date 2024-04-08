@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     
     public float moveSpeed = 7f;
-    public float dashSpeed = 56f;
+    public float dashSpeed = 80f;
     public float dashDuration = 0.0625f;
     public Rigidbody2D rb;
     public Animator animator;
@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject dashEffect;
     public Transform footPosition;
     public GameManager gameManager;
+    public float speedUp = 1f;
 
     private void Awake()
     {
@@ -65,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Actual movement/physics
-        rb.MovePosition(rb.position + (movement * moveSpeed * Time.fixedDeltaTime));
+        rb.MovePosition(rb.position + (movement * (moveSpeed * speedUp) * Time.fixedDeltaTime));
 
     }
 
@@ -85,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
         Instantiate(dashEffect, transform);
 
         state.isDashing = true;
-        rb.velocity = movement * dashSpeed/2;
+        rb.velocity = movement * speedUp * dashSpeed/2;
         yield return new WaitForSeconds(dashDuration);
         rb.velocity = Vector2.zero;
         state.isDashing = false;

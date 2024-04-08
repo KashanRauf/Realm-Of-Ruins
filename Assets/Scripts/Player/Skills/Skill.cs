@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Skill : MonoBehaviour
 {
+	public bool isActive;
 	public float cooldownTime;
 	public float wait;
 	public int stacks;
@@ -14,12 +15,14 @@ public class Skill : MonoBehaviour
 	public PlayerState state;
 	public PlayerMovement player;
 	public LayerMask targets;
+	public Image fillBar;
 	public Image icon;
 
 	//public virtual void Initialize() { }
 
 	public virtual void Invoke()
 	{
+		if (!isActive) return;
 		if (usages >= stacks)
 		{
 			wait -= Time.deltaTime;

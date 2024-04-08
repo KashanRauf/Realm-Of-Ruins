@@ -24,8 +24,8 @@ public class Staff : Weapon
     {
         weaponType = 2;
         baseDamage = 5.0f;
-        cooldownTime = 0.6f;
-        altCooldownTime = 1.75f;
+        cooldownTime = 0.3f;
+        altCooldownTime = 1.8f;
         playerMovement = GetComponentInParent<PlayerMovement>();
         player = GetComponentInParent<PlayerState>();
         pivotPoint = transform.parent;

@@ -31,6 +31,10 @@ public class BulletPattern : MonoBehaviour
                 return SecondPattern(time);
             case 2:
                 return ThirdPattern(time);
+            case 3:
+                return FourthPattern(time);
+            case 4:
+                return FifthPatern(time);
             default:
                 Debug.Log("Invalid pattern");
                 return Vector2.zero;
@@ -55,10 +59,16 @@ public class BulletPattern : MonoBehaviour
         return new Vector2(Mathf.Cos(time)*time, Mathf.Sin(time));
     }
 
-    // Pattern index 3: Expanding ring (nvm just use first with hella spokes)
+    // Pattern index 3: Index 1 but taller, for Valtor
     private static Vector3 FourthPattern(float time)
     {
-        return new Vector2(Mathf.Tan(time), Mathf.Tan(time));
+        return new Vector2(2.5f * time, 2 * Mathf.Sin(1.5f * time));
+    }
+
+    // Pattern index 4: Mirror image of index 3, for Valtor
+    private static Vector2 FifthPatern(float time)
+    {
+        return new Vector2(2.5f * time, 2 * Mathf.Sin(-1.5f * time));
     }
 }
 

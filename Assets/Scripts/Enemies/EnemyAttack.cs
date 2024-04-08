@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     [SerializeField]
-    public float minAttackRange { get; private set; } = 2.5f;
+    public float minAttackRange { get; private set; } = 2.0f;
     [SerializeField]
     public float maxAttackRange { get; private set; } = 5.0f;
     // Cooldown time in seconds

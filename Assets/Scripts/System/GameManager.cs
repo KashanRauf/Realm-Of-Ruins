@@ -17,11 +17,15 @@ public class GameManager : MonoBehaviour
     public TMP_Text history;
     public GameObject activeUI;
     public GameObject pauseUI;
+    public GameObject gameOverUI;
+    public string nextLevel;
+    public string currentLevel;
+
 
     private void Awake()
     {
-        activeUI.SetActive(true);
-        pauseUI.SetActive(false);
+        gameOverUI.SetActive(false);
+        Resume();
     }
 
     private void Update()
@@ -33,7 +37,14 @@ public class GameManager : MonoBehaviour
         healthBar.minValue = 0;
         healthBar.value = player.currentHealth;
 
-        player.CheckIfDead();
+        if (player.CheckIfDead())
+        {
+            // Trigger game over screen
+            gameOverUI.SetActive(true);
+            Time.timeScale = 0.0f;
+            isPaused = true;
+            return;
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -46,10 +57,9 @@ public class GameManager : MonoBehaviour
                 Pause();
             }
         }
-
     }
 
-    void Pause()
+    public void Pause()
     {
         isPaused = true;
         pauseUI.SetActive(true);
@@ -73,7 +83,28 @@ public class GameManager : MonoBehaviour
     public void ReturnToTitle()
     {
         Debug.Log("Return to title");
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(currentLevel);
+    }
+
+    public void OnDisable()
+    {
+        PlayerPrefs.SetInt("Saved", saved);
+        PlayerPrefs.SetInt("Killed", killed);
+        PlayerPrefs.SetString("Next", nextLevel);
+        Debug.Log("Dis Saved: " + saved + ", Killed: " + killed + ", Next: " + nextLevel);
+    }
+
+    public void OnEnable()
+    {
+        saved = PlayerPrefs.GetInt("Saved");
+        killed = PlayerPrefs.GetInt("Killed");
+        nextLevel = PlayerPrefs.GetString("Next");
+        Debug.Log("En Saved: " + saved + ", Killed: " + killed + ", Next: " + nextLevel);
     }
 
 }

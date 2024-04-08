@@ -17,6 +17,8 @@ public class TitleManager : MonoBehaviour
     {
         UI.SetActive(true);
         credits.SetActive(false);
+        PlayerPrefs.SetInt("Saved", 0);
+        PlayerPrefs.SetInt("Killed", 0);
     }
 
     private void Update()
@@ -33,7 +35,7 @@ public class TitleManager : MonoBehaviour
     public void Play()
     {
         audioManager.Play("click");
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("0");
     }
 
     public void Credits()

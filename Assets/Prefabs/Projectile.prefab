@@ -148,14 +148,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   purify: 0
-  damage: 0
+  damage: 5
   target:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   maxHits: 1
   hits: 0
   spoke: -1
   used: 0
+  hitEffect: {fileID: 8300000, guid: 3a22c6ff23d67e24eb79b84a20e337cb, type: 3}
 --- !u!82 &-6817469978193180057
 AudioSource:
   m_ObjectHideFlags: 0
@@ -166,9 +167,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a9b3e534be1b0a446bc3259c4a63b3ea, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0

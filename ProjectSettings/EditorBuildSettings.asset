@@ -6,9 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
+    path: Assets/Scenes/0.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 5158e807f3b61ed4197ad978d3a151e4
+  - enabled: 1
+    path: Assets/Scenes/Hub.unity
+    guid: cb110ee66a1b341178132fdfa2578f6f
+  - enabled: 1
+    path: Assets/Scenes/1.unity
+    guid: 52e58b7057e941643a23d5c9f62b98bd
+  - enabled: 1
+    path: Assets/Scenes/1BR.unity
+    guid: 1be7cf430e2613a4f8432a059365ed56
+  - enabled: 1
+    path: Assets/Scenes/2.unity
+    guid: b717481bba06c7c47bf9938d7d61e203
+  - enabled: 1
+    path: Assets/Scenes/2BR.unity
+    guid: 4578723829f34a24ea70e9e9c0b02796
+  - enabled: 1
+    path: Assets/Scenes/3.unity
+    guid: c8e16ba37cc6d4b518cebfbe94028b8b
+  - enabled: 1
+    path: Assets/Scenes/3BR.unity
+    guid: 32b8ce9eb09235941ade747607ff53ab
+  - enabled: 1
+    path: Assets/Scenes/PacifistEnding.unity
+    guid: 53f67ee97979a3a4f98e00b4c6b53d1b
+  - enabled: 1
+    path: Assets/Scenes/BrutalistEnding.unity
+    guid: 5988fe217e0d08f4980ae7ccf3519a90
   m_configObjects: {}

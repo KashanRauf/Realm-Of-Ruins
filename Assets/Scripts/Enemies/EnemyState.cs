@@ -39,6 +39,7 @@ public class EnemyState : State
         {
             Destroy(gameObject);
             manager.killed++;
+            Debug.Log("Killed: " + manager.killed);
         }
 
         // Will move to the game manager later
@@ -50,5 +51,6 @@ public class EnemyState : State
     {
         Destroy(gameObject);
         manager.saved++;
+        Debug.Log("Saved: " + manager.saved);
     }
 }
