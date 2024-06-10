@@ -31,4 +31,3 @@ Stuff that may be useful, include a link/name and a short description
 * Spencer Hum
 * Triss Lazaj
 * Ikra Mortoza
-* Lore Chiepe
